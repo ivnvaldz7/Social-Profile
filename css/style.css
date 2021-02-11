@@ -13,6 +13,44 @@
 html{
     font-family: 'Spartan', sans-serif;
 }
+html::before{
+    content: url(../images/bg-pattern-top-mobile.svg);
+    position: absolute;
+    left: -70px;
+    top: 0;
+}
+@media screen and (min-width:768px){
+    html::before{
+        content: url(../images/bg-pattern-top-desktop.svg);
+        position: absolute; 
+        left: 15%;
+    }
+}
+@media screen and (min-width:768px){
+    body{
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 500px);
+    }
+}
+@media screen and (min-width:768px){
+.header__title,
+    .header__subtitle{
+        text-align: left;
+        width: 60%;
+    }
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+    }
+}
+    
 .header{
     text-align: center;
     padding: 90px 10px 30px;
@@ -34,6 +72,29 @@ html{
 .rates{
     text-align: center;
 }
+@media screen and (min-width:768px){
+        .rated{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        position: relative;
+        top: 0;
+    }
+    .rated:first-child{
+        left: -50px;
+        margin-top: 20%;
+    }
+    .rated:last-child{
+        left: 50px;
+    }
+    .rated__text{
+        margin-left: 7%;
+        font-size: 14px;
+    }
+    
+}
+
 .rated{
     background-color: var(--DG-Magenta);
     color: var(--VD-Magenta);
@@ -51,6 +112,26 @@ html{
     margin-right: 5px;
     margin-bottom: 10px;
 }
+@media screen and (min-width:768px){
+    .testimonials{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        display: flex;
+        align-items: center;
+        margin-top: -10%;
+        padding: 0 10%;
+        position: relative;
+    }
+    .testimonial:nth-child(2){
+        top: 30px;
+        position: relative;
+    }    
+    .testimonial:nth-child(3){
+        top: 60px;
+        position: relative;
+    }
+}
+
 .testimonial{
     background-color: var(--VD-Magenta);
     margin: 15px 10px;
